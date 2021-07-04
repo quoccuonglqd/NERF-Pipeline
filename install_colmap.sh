@@ -1,5 +1,6 @@
 git clone https://github.com/Fyusion/LLFF
 cd LLFF
+export PATH=$PATH:$(pwd)
 pip install -r requirements.txt
 sudo apt-get install libglfw3-dev
 sudo apt-get install \
