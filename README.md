@@ -1,26 +1,12 @@
----
-layout: posts
-title:  "Guideline huấn luyện mô hình NERF"
-permalink: /blogs/Guideline NERF
-excerpt: ""
-header:
-  overlay_image: /assets/images/maxresdefault.jpg
-  teaser: /assets/images/maxresdefault.jpg
-  caption: ""
-  actions:
-    - label: "More Info"
-      url: "https://www.matthewtancik.com/nerf"
----
-
 # 1/ Giới thiệu  
   
 Ngày nay công nghệ 3D đang được ứng dụng trong rất nhiều lĩnh vực, từ giáo dục, y tế, thiết kế xây dựng hay có thể kể đến lĩnh vực rất được giới trẻ ưa thích- ngành công nghiệp game. Quy trình truyền thống để xây dựng nên các mô hình 3D vốn yêu cầu làm việc trên các phần mềm đồ họa chuyên dụng với các thao tác không thể thiếu từ việc lấy tọa độ các đỉnh vật thể, tô màu, căn chỉnh vị trí, v.v.
 
 Chắc hẳn trong số chúng ta đều từng tưởng tượng đến một quy trình làm việc ít phức tạp hơn, tiện lợi hơn. Ví dụ bạn có thể chụp những bức ảnh 2D của vật thể và để máy tính làm nốt những công việc còn lại để thu được mô hình 3D tương ứng. Và các nghiên cứu trong lĩnh vực **View synthesis and image-based rendering** đã thực sự biến ý tưởng này thành hiện thực.
 
-<img src="../assets/images/Xây dựng mô hình 3D với NERF/pecanpie_200k_rgb.gif" width="200" height="200" />
-<img src="../assets/images/Xây dựng mô hình 3D với NERF/benchflower_100k_rgb.gif" width="200" height="200" />
-<img src="../assets/images/Xây dựng mô hình 3D với NERF/colorspout_200k_rgb.gif" width="200" height="200" />
+<img src="images/pecanpie_200k_rgb.gif" width="200" height="200" />
+<img src="images/benchflower_100k_rgb.gif" width="200" height="200" />
+<img src="images/colorspout_200k_rgb.gif" width="200" height="200" />
 
 Bài viết này sẽ hướng dẫn các bạn sử dụng mô hình NERF để mô hình 3D hóa một tập hình ảnh cảnh vật bất kỳ. NERF cho phép chúng ta render hình của cảnh vật từ 1 góc độ mới chưa từng xuất hiện trong dữ liệu ảnh ban đầu. Bằng cách render từ các vị trí liên tiếp nhau, chúng ta có thể thu được khung cảnh động của cảnh vật như trên. Rất thú vị đúng không nào ?!!  
 
@@ -131,9 +117,9 @@ python run_nerf.py --config config.txt
 
 Hình ảnh, video minh họa cũng như trọng số mô hình sẽ thu được trong thư mục chứa output ở trên
 
-<img src="../assets/images/Xây dựng mô hình 3D với NERF/mclaren.gif" width="150" height="150" />
-<img src="../assets/images/Xây dựng mô hình 3D với NERF/motobike.gif" width="150" height="150" />
-<img src="../assets/images/Xây dựng mô hình 3D với NERF/sunnygo.gif" width="150" height="150" />
-<img src="../assets/images/Xây dựng mô hình 3D với NERF/vikoda.gif" width="150" height="150" />
+<img src="images/mclaren.gif" width="150" height="150" />
+<img src="images/motobike.gif" width="150" height="150" />
+<img src="images/sunnygo.gif" width="150" height="150" />
+<img src="images/vikoda.gif" width="150" height="150" />
 
 **_Lời kết_**: Vậy là chúng ta đã hoàn thành lần thử nghiệm đầu tiên. Bằng dữ liệu ảnh, ta đã thu được video tương ứng. Trọng số của mô hình NERF cũng được lưu lại và có thể sử dụng để lưu trữ một mô hình 3D thay cho các cách biểu diễn cũ. Mô hình NERF đã được cải tiến trong thơi gian gần đây; source code chính thức cũng đã hỗ trợ thêm nhiều tính năng thú vị thay vì chỉ tạo ra video đổi góc. Những điều này đang chờ chúng ta khám phá.
